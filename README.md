@@ -89,16 +89,16 @@ Legende : US = Userstory
 ###  Taskliste für die Umsetzung der Userstories
 | Tasknummer | Tasks | Userstory | Geschätzter Aufwand |
 |:-:|-----|:-:|:-:|
-| 1 | Grafisches Layout erstellen |  |  |
-| 2 | 4 Button für das Starten, Exit, Credit, Spielregel |  |  |
-| 3 | Erstellen von 2 Fenster für Spielregeln und Credits mit je ein Button return |  |  |
-| 4 | Neue Klasse Vue |  |  |
+| 1 |  |  |  |
+| 2 |  |  |  |
+| 3 |  |  |  |
+| 4 |  |  |  |
 | 5 |  |  |  |
 | 6 |  |  |  |
-| 7 | Geschwindigkeitsteuerung  |  |  |
-| 8 | 3 Button und ein Slider für der Musiksteuerung |  |  |
+| 7 |  |  |  |
+| 8 |  |  |  |
 | 9 |  |  |  |
-| 10 | Inbetriebnahme aller setOnAction (Mouse,Taste) |  |  |
+| 10 |  |  |  |
 
 ### Dokumentation wichtiger Code Snippets
 
@@ -129,16 +129,7 @@ Legende : US = Userstory
 
 ### Dokumentation wichtiger Code Snippets
 
-créer une balle
-positionner la balle
-rectangle créer et positionner
-prendre un input (souris) et lier au rectangle
-animation de la balle dans un timelineloop
-collision de la balle sur les bords de la fenêtre
-collision sur le rectangle
-accélération de la balle dès que ça touche le rectangle
-message final (perdu)
-affichage du score
+
 
 ### Testfälle in Bezug auf Akzeptanzkriterium
 | Testfall | Aus US/AK | Vorbedingung | Ablauf | Resultat |
