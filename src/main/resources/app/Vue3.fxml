@@ -3,16 +3,25 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="267.0" prefWidth="262.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="app.VueController">
+<AnchorPane prefHeight="267.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.VueController">
    <children>
-      <Pane layoutX="8.0" prefHeight="266.0" prefWidth="246.0">
+      <Pane layoutX="8.0" layoutY="1.0" prefHeight="266.0" prefWidth="246.0">
          <children>
-            <Text layoutX="47.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matthieu DOERLER" />
-            <Text layoutX="81.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emilie GEHL" />
-            <Text layoutX="83.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jules BEYEL" />
+            <Text layoutX="72.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matthieu DOERLER" />
+            <Text layoutX="91.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emilie GEHL">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Text>
+            <Text layoutX="92.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jules BEYEL" />
             <Button layoutX="180.0" layoutY="227.0" mnemonicParsing="false" onAction="#returned" text="Return" />
+            <Text fill="#d73f3f" layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creators, Programmers and Desigers" textAlignment="CENTER" wrappingWidth="187.7978515625">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
    </children>
