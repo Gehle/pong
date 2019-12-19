@@ -1,7 +1,5 @@
 package app;
 
-import java.io.File;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,24 +22,16 @@ public class VueController {
 
 	public void setSldQuertety(Slider sldQuertety) {
 		this.sldQuertety = sldQuertety;
-	}
-
-	// public String path = "@../../source/arcade.mp3";
-	
-	
-	
+	}	
+		
 	public Media media; 
 
 	public MediaPlayer mediaplayer;
 	
-	public VueController( ) {
-		
-		File file = new File(getClass().getResource("arcade.mp3").toString());
-		String path = file.toURI().toString();
+	public VueController() {
 		
 		media = new Media(getClass().getResource("arcade.mp3").toString());
 		mediaplayer = new MediaPlayer(media);
-		System.out.println(media.toString());
 	}
 
 
