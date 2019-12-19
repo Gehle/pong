@@ -100,8 +100,8 @@ Legende : US = Userstory
 
 ### Dokumentation wichtiger Code Snippets
 
-Code um eine neue Fenster anzuzeigen
-***
+**Code um eine neue Fenster anzuzeigen**
+
             Pane layout = new Pane();
 			FXMLLoader loader = new FXMLLoader();
 
@@ -111,18 +111,18 @@ Code um eine neue Fenster anzuzeigen
 
 			primaryStage.setScene(scene);
 			primaryStage.show();
-            ***
-Erstellung der Ball und Rechteck
-***
+           
+**Erstellung der Ball und Rechteck**
+
             Circle ball = new Circle(psx / 2, psy / 2, rball);
 			ball.setFill(Color.WHITE);
 
 			Rectangle joueur = new Rectangle((psx - lrect) / 2, rectY, lrect, hrect);																	
 			joueur.setFill(Color.WHITE);
-            ***
+           
 
-Beschleunigung der Ball in einen Loop
-***
+**Beschleunigung der Ball in einen Loop**
+
 loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent arg) {
 					
@@ -178,7 +178,7 @@ loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEven
 					primaryStage.setTitle("Pong || Score: " + score);}}));
 			loop.setCycleCount(Timeline.INDEFINITE);
 			loop.play();
-            ***
+         
 
 
 
@@ -207,27 +207,27 @@ loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEven
 
 ### Dokumentation wichtiger Code Snippets
 
-Fenstergrossebestimmung (der Benutzer kann es nicht ändern)
-***
-primaryStage.setResizable(false);
+**Fenstergrossebestimmung (der Benutzer kann es nicht ändern)**
+
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Pong");
 			primaryStage.show();
-            ***
+            
 
-Die Musik in den Ordner holen
-***
-File file = new File(getClass().getResource("arcade.mp3").toString());
+**Die Musik in den Ordner holen**
+
+		File file = new File(getClass().getResource("arcade.mp3").toString());
 		String path = file.toURI().toString();
 		
 		media = new Media(getClass().getResource("arcade.mp3").toString());
 		mediaplayer = new MediaPlayer(media);
 		System.out.println(media.toString());
-        ***
+        
 
-Musiksteuerung
-'''
-@FXML
+**Musiksteuerung**
+
+	@FXML
 	public void playSound(ActionEvent event) {
 		mediaplayer.play();
 	}
@@ -246,7 +246,7 @@ Musiksteuerung
 	public void change(ActionEvent event) {
 		mediaplayer.setVolume(sldQuertety.getValue());
 	}
-    '''
+    
 
 ### Testfälle in Bezug auf Akzeptanzkriterium
 | Testfall | Aus US/AK | Vorbedingung | Ablauf | Resultat |
