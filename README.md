@@ -226,7 +226,7 @@ File file = new File(getClass().getResource("arcade.mp3").toString());
         ***
 
 Musiksteuerung
-***
+'''
 @FXML
 	public void playSound(ActionEvent event) {
 		mediaplayer.play();
@@ -246,7 +246,7 @@ Musiksteuerung
 	public void change(ActionEvent event) {
 		mediaplayer.setVolume(sldQuertety.getValue());
 	}
-    ***
+    '''
 
 ### Testfälle in Bezug auf Akzeptanzkriterium
 | Testfall | Aus US/AK | Vorbedingung | Ablauf | Resultat |
