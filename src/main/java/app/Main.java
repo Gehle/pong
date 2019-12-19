@@ -30,13 +30,12 @@ public class Main extends Application {
 	private static final int lrect = 120; // largeur rectangle
 	private static final int hrect = 20; // hauteur rectangle
 	private static final int rectY = 570; //placement rectangle Y
-	static double ballSpeedX= 0.5;
-	static double ballSpeedY= -0.5;
-	static double dx = 0.5;
-	static double dy = 0.5;
-	static int score = 0;
-	static Timeline loop;
-	
+	private static double ballSpeedX= 0.5;
+	private static double ballSpeedY= -0.5;
+	private static double dx = 0.5;
+	private static double dy = 0.5;
+	private static int score = 0;
+	private static Timeline loop;
 	
 	private static Stage primaryStage;
 
@@ -146,9 +145,6 @@ public class Main extends Application {
 				joueur.setX(e.getSceneX() - lrect / 2);
 			});
 
-			//ballSpeedX = dx;
-			//ballSpeedY = -dy;
-
 			loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent arg) {
 					
@@ -186,12 +182,6 @@ public class Main extends Application {
 						text.setVisible(true);
 						message.setVisible(true);
 						loop.stop();
-						/*ballSpeedX = 0;
-						ballSpeedY = 0;
-						ball.setCenterX(25);
-						ball.setCenterY(25); 
-						ball.setFill(Color.BLACK);
-						ball.toBack();*/
 						
 						scene.setOnKeyPressed(new EventHandler<KeyEvent>() { // detecte si on a appui� sur une touche
 							public void handle(KeyEvent event) {
@@ -208,10 +198,6 @@ public class Main extends Application {
 			loop.setCycleCount(Timeline.INDEFINITE);
 			loop.play();
 
-			//if (ball.getCenterY() >= (psy - (rball / 2))) {
-			//	loop.stop();
-			//}
-			
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Pong");
