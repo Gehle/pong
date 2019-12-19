@@ -265,4 +265,4 @@ Legende : US = Userstory
 
 ## 9. Klassendiagramm
 
-![](src/main/resources/images/Klassendiagramm.PNG)
+![](src/main/resources/images/Klassendiagramm.jpeg)
