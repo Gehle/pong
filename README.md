@@ -78,10 +78,10 @@ Legende : AK = Akzeptanzkriterium
 ## 5. Releaseplan
 |  Release 1 | Release 2  |
 |:-:|:-:|
-|  US 2 | US 6  |
-|  US 3 | US 4  |
-|  US 5 | US 7  |
-|  US 1 | US 8  |
+|  US 1 | US 3  |
+|  US 2 | US 4  |
+|  US 5 | US 6  |
+|  US 8 | US 7  |
 
 Legende : US = Userstory
 
@@ -89,16 +89,14 @@ Legende : US = Userstory
 ###  Taskliste für die Umsetzung der Userstories
 | Tasknummer | Tasks | Userstory | Geschätzter Aufwand |
 |:-:|-----|:-:|:-:|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
-| 6 |  |  |  |
-| 7 |  |  |  |
-| 8 |  |  |  |
-| 9 |  |  |  |
-| 10 |  |  |  |
+| 1 | Grafisches Layout erstellen | 1 | 3 Stunden |
+| 2 | 4 Button für das Starten, Exit, Credits, und Spielregeln | 2 | 2 Stunden |
+| 3 | 2 Fenster für Spielregeln und Credits | 8 | 2 Stunden |
+| 4 | Neuer Klasse VueController | 1 | 1,5 Stunden |
+| 5 | Das Ball und das Rechteck erstellen und platzieren | 1 | 1,5 Stunden |
+| 6 | Ballgeschwindigkeit und -beuschleunigung erzeugen | 1 | 1,5 Stunden |
+| 7 | Rückprall dem Ball berücksichtigen | 1 | 2 Stunden |
+| 8 | Inbetriebnahme aller setOnAction (Mouse, Taste) | 1 | 1,5 Stunden |
 
 ### Dokumentation wichtiger Code Snippets
 
@@ -107,25 +105,25 @@ Legende : US = Userstory
 ### Testfälle in Bezug auf Akzeptanzkriterium
 | Testfall | Aus US/AK | Vorbedingung | Ablauf | Resultat |
 |:-:|:-:|-----|-----|-----|
-| 1 | 2 |  |  |  |
-| 2 | 3 |  |  |  |
-| 3 | 5 |  |  |  |
-| 4 | 6 |  |  |  |
+| 1 | 1 | Das Spiel wurde gestartet | Den Ball wurde mehrmals geprallt mit dem Rechteck | Der Ball beschleunigt sich |
+| 2 | 2 | Das Spiel wurde gestartet | Klicken auf Exit und ESC am Ende des Spiels | Das Spiel wurde beendet und neugestartet |
+| 3 | 5 | Internetverbindung ausfallen und dem Spiel starten | der Rechner steht in Flugzeugmodus | Das Spiel läuft gut |
+| 4 | 8 | Das Spiel wurde gestartet | Klicken auf Knopf "Spielregeln" | Das Spielregelnfenster erscheint |
 
 ## 7. Dokumentation Sprint 2
 ###  Taskliste für die Umsetzung der Userstories
 | Tasknummer | Tasks | Userstory | Geschätzter Aufwand |
 |:-:|-----|:-:|:-:|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 | Klassendiagramm auf Eclipse erstellen | 6 | 20 Minuten |
-| 5 | Dokumentation in Markdown Format in der README Datei schreiben (Projektbeschreiben) | 6 | 5 Stunden |
-| 6 | Dokumentation in Markdown Format in der README Datei schreiben (Sprint 1) | 6 | 4 Studen |
-| 7 | Dokumentation in Markdown Format in der README Datei schreiben (Sprint 2) | 6 | 4 Studen |
-| 8 | Kommentare in Programm hinzufügen | 6 | 1 Stude |
-| 9 | Testklasse schreiben (JUnit) | 6 | 1,5 STuden |
-| 10 |  |  |  |
+| 1 | 3 Button und ein Slider für Musiksteuerung | 3 | 1,5 Stunden |
+| 2 | Fenstergrossebestimmung | 7 | 30 Minuten |
+| 3 | Punktesumme und -anzeige | 4 | 30 Minuten |
+| 4 | Anschliessende Botschaft, wenn das Spiel beendet ist | 4 | 30 Minuten |
+| 5 | Klassendiagramm auf Eclipse erstellen | 6 | 20 Minuten |
+| 6 | Dokumentation in Markdown Format in der README Datei schreiben (Projektbeschreiben) | 6 | 4 Stunden |
+| 7 | Dokumentation in Markdown Format in der README Datei schreiben (Sprint 1) | 6 | 3 Stunden |
+| 8 | Dokumentation in Markdown Format in der README Datei schreiben (Sprint 2) | 6 | 3 Stunden |
+| 9 | Kommentare in Programm hinzufügen | 6 | 30 Minuten |
+| 10 | Testklasse schreiben (JUnit) | 6 | 1,5 Stunden |
 
 ### Dokumentation wichtiger Code Snippets
 
@@ -134,10 +132,9 @@ Legende : US = Userstory
 ### Testfälle in Bezug auf Akzeptanzkriterium
 | Testfall | Aus US/AK | Vorbedingung | Ablauf | Resultat |
 |:-:|:-:|-----|-----|-----|
-| 1 | 1 |  |  |  |
-| 2 | 4 |  |  |  |
-| 3 | 7 |  |  |  |
-| 4 | 8 |  |  |  |
+| 1 | 3 | Das Spiel wurde gestartet | Auf den Knopf für die Musiksteuerung drücken | Die Musik wurde gestartet und gestoppt |
+| 2 | 4 | Das Spiel wurde gestartet | Der Ball mehrmalls prellen | Der Punktestand erhöht sich |
+
 
 ## 8. Ergebnisse nach Umsetzung der Userstories
 
