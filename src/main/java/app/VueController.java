@@ -34,7 +34,7 @@ public class VueController {
 
 	public MediaPlayer mediaplayer;
 	
-	public VueController( ) {
+	public VueController() {
 		
 		File file = new File(getClass().getResource("arcade.mp3").toString());
 		String path = file.toURI().toString();
