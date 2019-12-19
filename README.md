@@ -100,6 +100,86 @@ Legende : US = Userstory
 
 ### Dokumentation wichtiger Code Snippets
 
+**Code um eine neue Fenster anzuzeigen**
+
+            Pane layout = new Pane();
+			FXMLLoader loader = new FXMLLoader();
+
+			loader.setLocation(Main.class.getResource("Vue2.fxml"));
+			layout = (Pane) loader.load();
+			Scene scene = new Scene(layout);
+
+			primaryStage.setScene(scene);
+			primaryStage.show();
+           
+**Erstellung der Ball und Rechteck**
+
+            Circle ball = new Circle(psx / 2, psy / 2, rball);
+			ball.setFill(Color.WHITE);
+
+			Rectangle joueur = new Rectangle((psx - lrect) / 2, rectY, lrect, hrect);																	
+			joueur.setFill(Color.WHITE);
+           
+
+**Beschleunigung der Ball in einen Loop**
+
+				loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
+				public void handle(ActionEvent arg) {
+					
+					// deplacement:
+					ball.setCenterX(ball.getCenterX() + ballSpeedX);
+					ball.setCenterY(ball.getCenterY() - ballSpeedY);
+
+					// haut
+					if (ball.getCenterY() <= (rball / 2)) {
+						ballSpeedY = -dy;
+					}
+
+					// bas
+					if (ball.getCenterY() >= rectY) {
+						if (ball.getCenterX() >= joueur.getX() && ball.getCenterX() <= joueur.getX() + lrect) {
+							dx += 0.25;
+							dy += 0.25;
+							ballSpeedY = dy;
+							score += 1;
+						}
+					}
+
+					// gauche
+					if (ball.getCenterX() <= (rball / 2)) {
+						ballSpeedX = dx;
+					}
+
+					// droit
+					if (ball.getCenterX() >= (psx - (rball / 2))) {
+						ballSpeedX = -dx;
+					}
+
+					// collision bas
+					if (ball.getCenterY() >= (psy - (rball / 2))) {
+						text.setVisible(true);
+						message.setVisible(true);
+						loop.stop();
+						/*ballSpeedX = 0;
+						ballSpeedY = 0;
+						ball.setCenterX(25);
+						ball.setCenterY(25); 
+						ball.setFill(Color.BLACK);
+						ball.toBack();*/
+						
+						scene.setOnKeyPressed(new EventHandler<KeyEvent>() { // detecte si on a appui� sur une touche
+							public void handle(KeyEvent event) {
+								if (event.getCode() == KeyCode.ESCAPE) {
+									Main.mainScene();
+								}
+								event.consume();
+							}});
+					}
+					primaryStage.setTitle("Pong || Score: " + score);}}));
+			loop.setCycleCount(Timeline.INDEFINITE);
+			loop.play();
+         
+
 
 
 ### Testfälle in Bezug auf Akzeptanzkriterium
@@ -127,7 +207,46 @@ Legende : US = Userstory
 
 ### Dokumentation wichtiger Code Snippets
 
+**Fenstergrossebestimmung (der Benutzer kann es nicht ändern)**
 
+			primaryStage.setResizable(false);
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Pong");
+			primaryStage.show();
+            
+
+**Die Musik in den Ordner holen**
+
+		File file = new File(getClass().getResource("arcade.mp3").toString());
+		String path = file.toURI().toString();
+		
+		media = new Media(getClass().getResource("arcade.mp3").toString());
+		mediaplayer = new MediaPlayer(media);
+		System.out.println(media.toString());
+        
+
+**Musiksteuerung**
+
+	@FXML
+	public void playSound(ActionEvent event) {
+		mediaplayer.play();
+	}
+
+	@FXML
+	public void volume(ActionEvent event) {
+		mediaplayer.setVolume(sldQuertety.getValue());
+	}
+
+	@FXML
+	public void pause(ActionEvent event) {
+		mediaplayer.pause();
+	}
+
+	@FXML
+	public void change(ActionEvent event) {
+		mediaplayer.setVolume(sldQuertety.getValue());
+	}
+    
 
 ### Testfälle in Bezug auf Akzeptanzkriterium
 | Testfall | Aus US/AK | Vorbedingung | Ablauf | Resultat |
@@ -138,8 +257,12 @@ Legende : US = Userstory
 
 ## 8. Ergebnisse nach Umsetzung der Userstories
 
-![Startseite](images/Startseite.png)
+![](src/main/resources/images/Startseite.PNG)
+
+![](src/main/resources/images/Spielregeln.PNG)
+
+![](src/main/resources/images/Spiel.PNG)
 
 ## 9. Klassendiagramm
 
-
+![](src/main/resources/images/Klassendiagramm.jpeg)
