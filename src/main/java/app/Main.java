@@ -59,10 +59,6 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
-			VueController controller = loader.getController();
-
-			controller.getMediaplayer().play();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -179,14 +175,18 @@ public class Main extends Application {
 
 					// collision bas
 					if (ball.getCenterY() >= (psy - (rball / 2))) {
+						ball.toBack();
+						ball.setFill(Color.BLACK);
 						text.setVisible(true);
 						message.setVisible(true);
 						loop.stop();
+						
 						
 						scene.setOnKeyPressed(new EventHandler<KeyEvent>() { // detecte si on a appui� sur une touche
 							public void handle(KeyEvent event) {
 								if (event.getCode() == KeyCode.ESCAPE) {
 									Main.mainScene();
+									score = 0;
 								}
 								event.consume();
 							}
@@ -197,7 +197,8 @@ public class Main extends Application {
 			}));
 			loop.setCycleCount(Timeline.INDEFINITE);
 			loop.play();
-
+			
+			primaryStage.setTitle("Pong || Score: " + score);
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Pong");
