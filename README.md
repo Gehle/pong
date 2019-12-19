@@ -123,7 +123,7 @@ Legende : US = Userstory
 
 **Beschleunigung der Ball in einen Loop**
 
-loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
+				loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent arg) {
 					
 					// deplacement:
@@ -265,4 +265,4 @@ loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEven
 
 ## 9. Klassendiagramm
 
-
+![](src/main/resources/images/Klassendiagramm.PNG)
