@@ -138,7 +138,7 @@ Legende : US = Userstory
 
 ## 8. Ergebnisse nach Umsetzung der Userstories
 
-![](src\main\resources\images\Startseite.PNG)
+![](src/main/resources/images/Startseite.PNG)
 
 ## 9. Klassendiagramm
 
