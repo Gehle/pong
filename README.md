@@ -44,16 +44,16 @@ Das Ziel ist es die erlernten Fähigkeiten und Kompetenzen im Bereich Programmie
 
 ## 2. Build-Anleitung
 
-Git clone:  https://github.com/Gehle/java_application2019
+Git clone:  https://github.com/Gehle/pong
 In Git program: 
 1. Speichern Sie Ihre src Datei von Ihre Git Projekt auf Ihre Rechner.
 2. Löschen Sie Ihre src Datei von Ihre Git Projekt.
 3. Fügen Sie die pom.xml Datei mit die geeignete Initialiesierung in das Git Projekt.
 4. Fügen Sie die src Ordner von einen Maven Projekt in das Git Projekt.
-5. Klicken Sie auf den rechten Maus Taste in " java_application2019": ->Configure ->Convert to Maven.
+5. Klicken Sie auf den rechten Maus Taste in " pong": ->Configure ->Convert to Maven.
 6. Fügen Sie Ihr eigenes Package in das Ordner src/main/java.
-7. Klicken Sie auf den rechten Maus Taste in " java_application2019": ->Run as ->Maven clean.
-8. Klicken Sie auf den rechten Maus Taste in "java_application2019": ->Run as ->Maven install.
+7. Klicken Sie auf den rechten Maus Taste in " pong": ->Run as ->Maven clean.
+8. Klicken Sie auf den rechten Maus Taste in "pong": ->Run as ->Maven install.
 9. Prüfen Sie in das Ordner "target" ob Sie eine Datei .jar haben.
 
 ## 3. Bedienungsanleitung
