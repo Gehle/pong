@@ -145,6 +145,13 @@ public class Main extends Application {
 				joueur.setX(e.getSceneX() - lrect / 2);
 			});
 
+			// reinitialisation du score et de la vitesse entre les parties
+			ballSpeedX= 0.5;
+			ballSpeedY= -0.5;
+			score = 0;
+			dx = 0.5;
+			dy = 0.5;
+			
 			loop = new Timeline(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent arg) {
 					
