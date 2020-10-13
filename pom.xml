@@ -15,7 +15,7 @@
 
 		<version.servlet.api>3.1.0</version.servlet.api>
 
-		<version.junit>4.12</version.junit>
+		<version.junit>4.13.1</version.junit>
 
 	</properties>
 
